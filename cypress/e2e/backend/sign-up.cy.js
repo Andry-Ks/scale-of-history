@@ -6,10 +6,10 @@ const validPassword = 'Password123!Aa';
 const invalidPassword = 'Abc!123';
 const validNewUserName = `User_${Date.now()}`;
 
-describe ("Sign-up test", () => {
+describe ("Positive sign-up test", () => {
     let userId;
     let accessToken;
-    it ("Positive sign-up test", () => {
+    it ("Sign-up test user", () => {
         cy.request({
                 method: 'POST',
                 url: `${backendUrl}/register`,
@@ -39,7 +39,9 @@ describe ("Sign-up test", () => {
             expect(response.status).to.eq(200)
         });
     });
+});
 
+describe ("Negative sign-up test", () => {
     it ("Sign-up with incorrect method", () => {
         cy.request({
             method: 'GET',
@@ -70,7 +72,7 @@ describe ("Sign-up test", () => {
         });
     });
 
-    // it ("Sign-up with missing password", () => { ////temporary works on the server
+    // it ("Sign-up with missing password", () => { //temporary works on the server
     //     cy.request({
     //         method: 'POST',
     //         url: `${backendUrl}/register`,
