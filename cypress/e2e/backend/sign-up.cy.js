@@ -2,8 +2,8 @@
 const backendUrl = Cypress.env('backendUrl');
 const validEmail = `User_${Date.now()}@example.com`;
 const invalidEmail = '.test.user@example.com';
-const validPassword = 'Password123!Aa';
-const invalidPassword = 'Abc!123';
+const validPassword = `${Date.now()}Password`;
+const invalidPassword = 'Abc123';
 const validNewUserName = `User_${Date.now()}`;
 
 describe ("Positive sign-up test", () => {

@@ -8,7 +8,15 @@ module.exports = defineConfig({
 
     env: {
       backendUrl: 'https://aleksdark1313.pythonanywhere.com',
+
+      validUserName: process.env.CYPRESS_VALID_USERNAME,
+      validPassword: process.env.CYPRESS_VALID_PASSWORD,
+      
     },
 
+
+
   },
+
+
 });

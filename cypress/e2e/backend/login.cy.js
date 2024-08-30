@@ -1,7 +1,7 @@
 "use strict";
 const backendUrl = Cypress.env('backendUrl');
-const validUserName = 'TestAutoUser';
-const validPassword = '12345678Abc!';
+const validUserName = Cypress.env('validUserName');
+const validPassword = Cypress.env('validPassword');
 const wrongUserName = 'WrongUserExample';
 const wrongPassword = 'wrongpassword123456789Abc!';
 
