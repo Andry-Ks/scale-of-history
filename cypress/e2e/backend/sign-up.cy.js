@@ -2,7 +2,7 @@
 const backendUrl = Cypress.env('backendUrl');
 const validEmail = `User_${Date.now()}@example.com`;
 const invalidEmail = '.test.user@example.com';
-const validPassword = `${Date.now()}Password`;
+const validPassword = `${Date.now()}Pass!`;
 const invalidPassword = 'Abc123';
 const validNewUserName = `User_${Date.now()}`;
 
